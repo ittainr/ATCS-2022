@@ -4,15 +4,38 @@ body {
 }
 
 .indexgrid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 6fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .indeximgcontainer {
-    margin-left: 5px;
     height: 700px;
 }
 
 .indeximg {
     height: inherit;
+}
+
+.about {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.aboutimg {
+    height: 670px;
 }
