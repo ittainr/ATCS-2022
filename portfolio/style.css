@@ -1,0 +1,18 @@
+body {
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.indexgrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 6fr;
+}
+
+.indeximgcontainer {
+    margin-left: 5px;
+    height: 700px;
+}
+
+.indeximg {
+    height: inherit;
+}
