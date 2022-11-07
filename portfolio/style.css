@@ -3,59 +3,6 @@ body {
     max-width: 100%;
 }
 
-a {
-    color: blue;
-    text-decoration: none;
-}
-
-.indexgrid {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.indeximgcontainer {
-    height: 700px;
-}
-
-.indeximg {
-    height: inherit;
-    width: 1000px;
-}
-
-.about {
-    display: grid;
-    grid-template-rows: auto auto;
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.contenta {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.aboutimg {
-    height: 670px;
-    width: 50%;
-    margin-right: 10px;
-}
-
-.item {
-    margin: 2em;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    font-size: large;
-    font-weight: bold;
-}
-
-.contentc {
-    margin-left: 1em;
+#dark {
+    color: black;
 }
