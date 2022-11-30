@@ -2,35 +2,67 @@
 
 <html>
     <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- Your Personal CSS BELOW this Line -->
         <title>About Me</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style-about.css">
     </head>
     <body>
-        <div class="about">
-            <div class="header">
-                <div>
-                    <a href="index.html">Ittai Nelken-Regev</a>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="index.html">Ittai Nelken-Regev</a>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="experience.html">My Experience</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                              Contact Me
+                            </a>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item">Phone: 617-659-2317</a>
+                              <a class="dropdown-item">Email: ittai.nelken-regev@menloschool.org</a>
+                              <a class="dropdown-item">GitHub: ittainr</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div>
-                    <a href="about.html">About Me</a>
-                    <a href="experience.html">My Experience</a>
-                    <a href="contact.html">Contact Me</a>
+            </nav>
+            <div class="jumbotron"><h1>About Me</h1></div>
+            <div class="card-deck">
+                <div class="card col-med-6">
+                    <div class="card-body">
+                      <h5 class="card-title">In School</h5>
+                      <p class="card-text">I first started officially coding in 10th grade, when I took AP CS A, but I already had some experience, as I had 
+                        coded with Scratch in the past, and I did a project in 8th grade that involved some coding in Python. In Junior year, Menlo's CS 
+                        curriculum changed, so I took CS2. This year, I am taking both AT CS and App Design and Development to further expand my CS knowledge.</p>
+                    </div>
                 </div>
-            </div>
-            <hr>
-            <div class="contenta">
-                <img class="aboutimg" src="https://www.computersciencedegreehub.com/wp-content/uploads/2016/02/what-is-coding-1024x683.jpg">
-                <div>
-                    <h1>About Me</h1>
-                    I first started officially coding in 10th grade, when I took AP CS A, but I already had some experience, as I had 
-                    coded with Scratch in the past, and I did a project in 8th grade that involved some coding in Python. Near the end of 
-                    10th grade, I was accepted for an internship where I would train several deep learning models, so in order to 
-                    prepare for this, I relearned Python, and took several Coursera courses to learn how to create Convolutional Neural 
-                    Networks (CNNs). In Junior year, Menlo's CS curriculum changed, so I took CS2, and after my experience in 
-                    applying CS in a real world use, this felt much easier for me. This year, I am taking both AT CS and App Design 
-                    and Development to further expand my CS knowledge.
+                <div class="card col-med-6">
+                    <div class="card-body">
+                      <h5 class="card-title">Outside School</h5>
+                      <p class="card-text">Near the end of 10th grade, I was accepted for an internship where I would train several deep learning models, 
+                        so in order to prepare for this, I relearned Python, and took several Coursera courses to learn how to create Convolutional Neural 
+                        Networks (CNNs). After my experience in applying CS in a real world context, CS in Junior year felt much easier for me.</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- Your Content ABOVE this Line -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>

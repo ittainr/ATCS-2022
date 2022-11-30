@@ -1,26 +1,65 @@
 <!DOCTYPE html>
-
+<!-- bootstrap -->
 <html>
     <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- Your Personal CSS BELOW this Line -->
         <title>Ittai Nelken-Regev</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="indexgrid">
-            <div></div>
-            <div>
-                <p><h3>Ittai Nelken-Regev</h3></p>
-                <p>Student | Programmer</p>
-                <hr>
-                <div>
-                    <p><a href="about.html">About Me</a></p>
-                    <p><a href="experience.html">My Experience</a></p>
-                    <p><a href="contact.html">Contact Me</a></p>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="index.html">Ittai Nelken-Regev</a>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="experience.html">My Experience</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                              Contact Me
+                            </a>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item">Phone: 617-659-2317</a>
+                              <a class="dropdown-item">Email: ittai.nelken-regev@menloschool.org</a>
+                              <a class="dropdown-item">GitHub: ittainr</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="jumbotron"><h1>Ittai Nelken-Regev</h1></div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://s3.envato.com/files/238233065/preview.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 id="dark">Student</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2021%2F09%2FUntitled-design-14.jpg&signature=3de86691d6ab8d950654a02334fd2774" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Programmer</h5>
+                    </div>
+                  </div>
                 </div>
             </div>
-            <div class="indeximgcontainer">
-                <img class="indeximg" src="https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2021%2F09%2FUntitled-design-14.jpg&signature=3de86691d6ab8d950654a02334fd2774">
-            </div>
-        </div>
+            <!-- Your Content ABOVE this Line -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </div class="container">
     </body>
 </html>
