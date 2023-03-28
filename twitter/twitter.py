@@ -79,14 +79,20 @@ class Twitter:
     
     def logout(self):
         print("Goodbye!")
-        quit
+        quit()
 
     """
     Allows the user to login,  
     register, or exit.
     """
     def startup(self):
-        pass
+        choice=int(input("Please select a menu option:\n1. Login\n2. Register\n0. Exit\n"))
+        if choice==1:
+            return self.login()
+        elif choice==2:
+            return self.register_user()
+        else:
+            self.logout()
 
     def follow(self):
         pass
