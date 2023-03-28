@@ -71,4 +71,4 @@ class TweetTag(Base):
     #Columns
     id = Column("id", INTEGER, primary_key=True)
     tweet_id=Column("tweet_id", INTEGER, ForeignKey("tweets.id"))
-    tag_id=Column("tag_id", INTEGER, ForeignKey("tag.id"))
+    tag_id=Column("tag_id", INTEGER, ForeignKey("tags.id"))

@@ -38,7 +38,18 @@ class Twitter:
     is guaranteed to be logged in after this function.
     """
     def register_user(self):
-        pass
+        while True:
+            username=input("What will your twitter handle be?\n")
+            password=input("Enter a password\n")
+            check=input("Re-enter your password\n")
+            if username in db_session.query(User.username):
+                print("That username is already taken. Try again.\n")
+            elif password!=check:
+                print("Those passwords don't match. Try again.\n")
+            else:
+                db_session.add(User(username=username, password=password))
+                print(f"\nWelcome {username}!")
+                return
 
     """
     Logs the user in. The user
