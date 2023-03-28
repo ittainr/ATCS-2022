@@ -3,6 +3,9 @@ from database import init_db, db_session
 from datetime import datetime
 
 class Twitter:
+    #The current user
+    log=None
+
     """
     The menu to print once a user has logged in
     """
@@ -53,21 +56,30 @@ class Twitter:
             if password!=check:
                 print("Those passwords don't match. Try again.\n")
             else:
-                db_session.add(User(username=username, password=password))
+                user=User(username=username, password=password)
+                db_session.add(user)
                 print(f"\nWelcome {username}!")
                 db_session.commit()
-                return
+                return user
 
     """
     Logs the user in. The user
     is guaranteed to be logged in after this function.
     """
     def login(self):
-        pass
+        while True:
+            username=input("Username: ")
+            password=input("Password: ")
+            for user in db_session.query(User).all():
+                if user.username==username and user.password==password:
+                    print(f"Welcome {username}!")
+                    return user
+            print("Invalid username or password.")
 
     
     def logout(self):
-        pass
+        print("Goodbye!")
+        quit
 
     """
     Allows the user to login,  
@@ -109,8 +121,7 @@ class Twitter:
         init_db()
 
         print("Welcome to ATCS Twitter!")
-        self.register_user()
-        self.startup()
+        self.log=self.startup()
 
         self.print_menu()
         option = int(input(""))
