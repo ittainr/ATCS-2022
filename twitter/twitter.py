@@ -39,16 +39,23 @@ class Twitter:
     """
     def register_user(self):
         while True:
+            fail=False
             username=input("What will your twitter handle be?\n")
             password=input("Enter a password\n")
             check=input("Re-enter your password\n")
-            if username in db_session.query(User.username):
-                print("That username is already taken. Try again.\n")
-            elif password!=check:
+            for name in db_session.query(User.username):
+                if username==name[0]:
+                    print("That username is already taken. Try again.\n")
+                    fail=True
+                    break
+            if fail:
+                continue
+            if password!=check:
                 print("Those passwords don't match. Try again.\n")
             else:
                 db_session.add(User(username=username, password=password))
                 print(f"\nWelcome {username}!")
+                db_session.commit()
                 return
 
     """
@@ -102,6 +109,7 @@ class Twitter:
         init_db()
 
         print("Welcome to ATCS Twitter!")
+        self.register_user()
         self.startup()
 
         self.print_menu()
