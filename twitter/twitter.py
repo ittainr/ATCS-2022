@@ -78,7 +78,7 @@ class Twitter:
 
     
     def logout(self):
-        print("Goodbye!")
+        self.end()
         quit()
 
     """
@@ -129,24 +129,23 @@ class Twitter:
         print("Welcome to ATCS Twitter!")
         self.log=self.startup()
 
-        self.print_menu()
-        option = int(input(""))
+        while True:
+            self.print_menu()
+            option = int(input(""))
 
-        if option == 1:
-            self.view_feed()
-        elif option == 2:
-            self.view_my_tweets()
-        elif option == 3:
-            self.search_by_tag()
-        elif option == 4:
-            self.search_by_user()
-        elif option == 5:
-            self.tweet()
-        elif option == 6:
-            self.follow()
-        elif option == 7:
-            self.unfollow()
-        else:
-            self.logout()
-        
-        self.end()
+            if option == 1:
+                self.view_feed()
+            elif option == 2:
+                self.view_my_tweets()
+            elif option == 3:
+                self.search_by_tag()
+            elif option == 4:
+                self.search_by_user()
+            elif option == 5:
+                self.tweet()
+            elif option == 6:
+                self.follow()
+            elif option == 7:
+                self.unfollow()
+            else:
+                self.logout()
