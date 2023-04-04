@@ -123,12 +123,15 @@ class Twitter:
         new_tweet = Tweet(content=content, timestamp=timestamp, username=self.log.username)
         tag = db_session.query(Tag).all()
         for t in tags.split():
+            j=True
             for a in tag:
-                if t==a:
+                if t==a.content:
                     new_tweet.tags.append(a)
+                    j=False
                     break
-            g = Tag(content=t)
-            new_tweet.tags.append(g)
+            if j:
+                g = Tag(content=t)
+                new_tweet.tags.append(g)
         db_session.add(new_tweet)
         db_session.commit()
     
