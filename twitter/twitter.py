@@ -117,7 +117,20 @@ class Twitter:
         print(f"You don't follow {user}")
 
     def tweet(self):
-        pass
+        content = input("Enter the message you want to tweet: ")
+        tags = input("Enter tags (seperate by spaces): ")
+        timestamp = datetime.now()
+        new_tweet = Tweet(content=content, timestamp=timestamp, username=self.log.username)
+        tag = db_session.query(Tag).all()
+        for t in tags.split():
+            for a in tag:
+                if t==a:
+                    new_tweet.tags.append(a)
+                    break
+            g = Tag(content=t)
+            new_tweet.tags.append(g)
+        db_session.add(new_tweet)
+        db_session.commit()
     
     def view_my_tweets(self):
         pass
