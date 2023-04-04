@@ -143,7 +143,12 @@ class Twitter:
     people the user follows
     """
     def view_feed(self):
-        pass
+        users = []
+        following = db_session.query(User).where(Follower.follower_id == self.log.username)
+        for i in following:
+            users.append(i.username)
+        tweet = db_session.query(Tweet).filter(Tweet.username.in_(users)).order_by(Tweet.timestamp.desc()).limit(5).all()
+        self.print_tweets(tweet)
 
     def search_by_user(self):
         pass
