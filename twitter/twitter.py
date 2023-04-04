@@ -95,7 +95,15 @@ class Twitter:
             self.logout()
 
     def follow(self):
-        pass
+        follow=input("Enter the username of the user you want to follow:\n")
+        user=db_session.query(User).where(User.username==follow).first()
+        for name in db_session.query(Follower.following_id).where(Follower.follower_id==self.log.username).all():
+            if user.username == name[0]:
+                print(f"You already follow {user}")
+                return
+        db_session.add(Follower(follower_id=self.log.username, following_id=user.username))
+        db_session.commit()
+        print(f"You now follow {user}")
 
     def unfollow(self):
         pass
