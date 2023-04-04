@@ -52,7 +52,7 @@ class Tweet(Base):
     user=relationship("User", back_populates="tweets")
 
     def __repr__(self):
-        return f"{self.user}\n{self.content}\n{' '.join(self.tags)}\n{self.timestamp}"
+        return f"{self.user}\n{self.content}\n{' '.join(map(str, self.tags))}\n{self.timestamp}"
 
 class Tag(Base):
     __tablename__="tags"

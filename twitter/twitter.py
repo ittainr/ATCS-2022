@@ -136,7 +136,7 @@ class Twitter:
         db_session.commit()
     
     def view_my_tweets(self):
-        pass
+        self.print_tweets(db_session.query(Tweet).where(Tweet.username==self.log.username))
     
     """
     Prints the 5 most recent tweets of the 
