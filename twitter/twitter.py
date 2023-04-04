@@ -106,7 +106,15 @@ class Twitter:
         print(f"You now follow {user}")
 
     def unfollow(self):
-        pass
+        unfollow=input("Enter the username of the user you want to unfollow:\n")
+        user=db_session.query(User).where(User.username==unfollow).first()
+        for follower in db_session.query(Follower).where(Follower.follower_id==self.log.username).all():
+            if user.username == follower.following_id:
+                db_session.delete(follower)
+                db_session.commit()
+                print(f"You no longer follow {user}")
+                return
+        print(f"You don't follow {user}")
 
     def tweet(self):
         pass
