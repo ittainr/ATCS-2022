@@ -151,7 +151,16 @@ class Twitter:
         self.print_tweets(tweet)
 
     def search_by_user(self):
-        pass
+        entered_user = input("Enter a user: \n")
+        users = db_session.query(Tag).filter_by(content = entered_user)
+        if users.count == 0:
+            print("No tweets by this user")
+        else:
+            tweets = users[0].tweets
+            if len(tweets) == 0:
+                print("No tweets by this user")
+            else:
+                self.print_tweets(tweets)
 
     def search_by_tag(self):
         pass
