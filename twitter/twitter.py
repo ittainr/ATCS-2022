@@ -152,7 +152,7 @@ class Twitter:
 
     def search_by_user(self):
         entered_user = input("Enter a user: \n")
-        users = db_session.query(Tag).filter_by(content = entered_user)
+        users = db_session.query(User).filter_by(content = entered_user)
         if users.count == 0:
             print("No tweets by this user")
         else:
